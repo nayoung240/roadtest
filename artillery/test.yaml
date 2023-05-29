@@ -1,0 +1,12 @@
+config:
+  target: "https://map.naver.com"
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      name: Warm up
+scenarios:
+  # We define one scenario:
+  - name: "just get hash"
+    flow:
+      - get:
+          url: "/v5/search/%EB%A1%AF%EB%8D%B0%EB%B0%B1%ED%99%94%EC%A0%90?c=13,0,0,0,dh"
