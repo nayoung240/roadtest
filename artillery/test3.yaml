@@ -1,0 +1,15 @@
+config:
+  target: "https://live.afreecatv.com/api/myplus/myplusCatchController.php"
+  phases:
+    - duration: 60
+      arrivalRate: 1
+      name: Warm up
+  defaults:
+    headers:
+      Cookie: '_au=dafee42c3b730ae0277248801bc07d7d; _au3rd=dafee42c3b730ae0277248801bc07d7d; AbroadChk=FAIL; bjStationHistory=%026432272%0211165615%023106948%0216183454%0211582323%026836057%0220825016%027115965%0213072696; AbroadVod=FAIL; _ausa=0x7a85f168; _ausb=0xff36438d; _ga=GA1.1.2127846699.1687277331; _ga_9PY781H32Y=GS1.1.1687277330.1.1.1687277330.60.0.0'
+scenarios:
+  # We define one scenario:
+  - name: "nologin"
+    flow:
+      - post:
+          url: "/"
